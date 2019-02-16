@@ -1,0 +1,48 @@
+<!--
+Ellen Carey 
+CSD 122 Rock paper scissors game.
+html contains 3 images, onclick they make your choice.
+When a picture is clicked the play function is called
+
+form for alternate way to make choice.
+When submit is clicked, validateForm is called
+Displays choices and winner
+-->
+<html>
+
+<head>
+    <title>Rock Paper Scissors Game!</title>
+    <script src="javascript/myFunctions.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+   
+</head>
+
+<body>
+     
+    <div>
+        <!--Game images, can click on to make a choice-->
+        <img onclick="play('rock')" src="images/rock.jpg"  />
+        <img onclick="play('paper')" src="images/paper.jpg" />
+        <img onclick="play('scissors')" src="images/scissors.jpg" />
+
+        
+        <!--Form for an alternative way to type choice-->
+        <h1>Click a picture to make your choice, or type rock, paper, or scissors</h1>
+        <!--calls validateForm which starts the game-->
+        <form name="form1" id="form1" onsubmit = "validateForm(event)"> 
+        <label for="inputField">Enter text here - </label>
+        <input id="inputField" name="inputField" type="text" size="30" /> <br /><br /> 
+      
+        
+        <button type="submit">Submit</button>
+    </form> 
+    
+    <!--Results displayed-->
+    <h3 id = "choices"> </h3>
+    <h3 id = "winner"> </h3>
+    </div>
+    
+</body>
+
+</html>
